@@ -1,0 +1,373 @@
+@mixin position($direction:left, $positionvalue:absolute, $value1:10px, $value2:10px) {
+    @if ($direction==left) {
+        position: $positionvalue;
+        left: $value1;
+        top: $value2;
+    }
+    @else {
+        position: $positionvalue;
+        right: $value1;
+        bottom: $value2;
+    }
+}
+@mixin borderstyle($size:1px, $style:solid, $color:black) {
+    border: $size $style $color;
+}
+@mixin position($direction:left, $positionvalue:absolute, $value1:10px, $value2:10px) {
+    @if ($direction==left) {
+        position: $positionvalue;
+        left: $value1;
+        top: $value2;
+    }
+    @else {
+        position: $positionvalue;
+        right: $value1;
+        bottom: $value2;
+    }
+}
+%cleafix::after{
+    //被继承的代码不会编码
+     content: '';
+     clear: both;
+     overflow: hidden;
+     display: block;
+     height: 0;
+}
+
+$body:100%;
+$html:100%;
+
+$color:#666666;
+$warpwidth:1226px;
+$center:0 auto;
+
+
+body,html{
+    width: 100%;
+}
+// 这里是导航第一部分
+.header{   
+    background: #333333;
+    width: 100%;
+    height:37px;
+    .warp{
+        color: white;
+        width:1226px;
+        margin:0 auto;
+       .toolbar-left{
+       
+           ul{  
+               width: 580px;
+            
+               float: left;
+   
+             li{
+                margin: -2px;
+                width: 145px;
+                display: inline-block;
+                color: white;
+                line-height: 35px;
+                &:hover{
+                      background-color: #666666;
+            }
+        }
+     }
+       
+       }
+       .toolbar-right{
+
+        ul{ 
+            width: 557px;
+            float: right;
+            list-style: none;
+          li{
+              text-align: center;
+              width: 120px;
+              line-height: 35px;
+             display: inline-block;
+             &:hover{
+                   background-color:$color;
+         }
+     }
+  }
+       }
+    }
+}
+ .header a{
+    height: 35px;
+    text-align: center; 
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 35px;
+}
+.lo-re {
+    display: inline-block;
+    margin-right: 20px;
+    a:hover{
+     color: red;
+}
+}
+//以下是二级导航的css
+ 
+//这里是我的长虹的定位
+ #wdch-pos{
+  
+     &:hover .wdch{
+         display: block;
+     }
+    position: relative;
+   
+    .wdch{
+       z-index: 334;
+       @include position(left, absolute,0px, 37px);
+       display: none;
+       width: 200px;
+       background:white;
+       padding: 25px;
+       .wdch-top{
+           img{
+           
+            width: 70px;
+            float: left;
+            margin-right: 10px;
+           }
+           a{
+             color: blue;
+           }
+           p{
+               a{
+               font-size: 16px;
+               } 
+           }
+          span{
+             margin-left: 12px;
+           }
+      }
+    
+   .wdch-bottom{
+           margin-top: 10px;
+          span,a{
+          color: #666666;
+        } 
+           a{  &:hover{
+           color: red;
+           }
+         }
+          span{
+        margin: 0 35px;
+      }
+    }
+  }
+}
+
+//虹创有品 (图片定位)
+#hcyp-pos{
+    z-index: 444;
+    &:hover .hcyp{
+        display: block;
+    }
+    position: relative;
+     .hcyp{
+        display: none;
+       @include position(left, absolute,0px, 37px);
+        }
+      }
+
+//购物车
+#gwc-pos{
+    position: relative;
+    &:hover .gwc{
+        display: block;
+    }
+    .gwc{
+     
+        z-index: 5555;
+       @include position(left, absolute,-180px, 37px);
+       z-index: 334;
+       background-color:white;
+       width: 300px;
+       height: 70px;
+       text-align: center;
+       line-height: 70px;
+       font-size: 14px;
+       color:$color;
+       box-shadow: 0px 0px 1px rgba(0, 0, 0, .3);
+       display: none;
+}
+}
+
+// 这里是导航第二部分
+
+.hd-Second{
+    background-color: red;
+    position: relative;
+    height: 81px;
+    background:white;
+    width: 100%;
+    .hd-Second-wrap{
+        width:1226px;
+        margin: $center;
+        h1{ 
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            width: 240px;
+            height: 81px;
+            float: left;
+        }
+        .hd-second-nav{
+          margin-right: 20px;
+          margin-left: 30px;
+          line-height: 81px;
+          text-align: center;
+          li{   
+              a{
+                color: #333333;
+              }
+              &:hover a{
+               color: red;
+              }
+              &:hover .hd-second-Sub-wrap{
+                  display: block;
+              }
+              width:90px;
+              height: 81px;
+           
+              float: left;
+          }
+        }
+       
+
+    }
+
+}
+//   这是中间部分的二级导航
+.hd-second-Sub-wrap{
+    z-index: 100;
+    display: none;
+    // overflow: hidden;
+    @extend %cleafix::after;
+    height: 229px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+    @include position(left, absolute, 0px,81px);
+    width: 100%;
+    .hd-second-Sub-con{
+        margin: 0 auto;
+        overflow: hidden;
+        width: $warpwidth;
+        .hd-second-Sub-title{
+            font-size: 16px;
+            color: #666666;
+            cursor: default;
+            line-height: 229px;
+            height: 229px;
+            width: 200px;
+            padding-right: 45px;
+            margin-left: 32px;
+            float: left;
+        }
+        .hd-second-Sub-box{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 135px;
+            float: right;
+
+            img{
+                border: 1px solid black;
+                padding-right: 60px;
+                height: 135px;
+                width: 135px;
+                display: block;
+                border: 0;
+                vertical-align: middle;
+               
+            }
+            float: left;
+            margin-top: 20px;
+        
+            p{   
+                width: 135px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: center;
+                line-height: 23px;
+                margin-top: 16px;
+                font-size: 14px;
+                color: #000000;
+            }
+            h1{
+                width: 135px;
+                line-height: 23px;
+                font-size: 14px;
+                color: #f12020;
+                font-weight: normal;
+                text-align: center;
+            }
+
+        }
+    }
+        
+   
+}
+
+  
+ //搜索框
+
+   
+.Search-input{ //大写的s是包住一整个的 
+            float: right;
+            position: relative; 
+            background: white;
+            height: 38px;
+            width: 200px;
+      
+            overflow: hidden;
+            margin-top: 20px;
+            color: #a9a9a9;
+           @include borderstyle(1px, solid, #e3e3e3);
+            #search-input {//小写的是搜索框
+        
+             width:165px;
+             height:36px;
+             outline: none;
+             border: none;
+             margin-left: 10px;
+             font-size: 14px;
+             color: #a9a9a9;
+            }
+            span{
+              @include position(right, absolute,15px, 7px);
+              font-size: 20px;
+              color: #777777;
+            }
+         
+        }
+       
+    
+   
+
+// }
+// }
+   //不知道为什么这里写的样式没用 所以我把本来包在搜索框里的给单独写一个盒子出来
+   .search-input-sub{
+    display: none;
+    width: 202px;
+    height: 150px;
+    background:pink; 
+    position: absolute;
+    // left: 0px; top:97px;
+     p{
+      height: 30px;
+      line-height: 30px;
+      margin: 5px;
+          a{
+              color: #a9a9a9;
+              font-size: 14px;
+          }
+     
+     } 
+}
