@@ -320,8 +320,16 @@ body, html {
   font-size: 14px;
 }
 
+.hd-second-Sub-wrap {
+  content: '';
+  clear: both;
+  overflow: hidden;
+  display: block;
+  height: 0;
+}
+
 .banner-wrap {
-  width: 1902px;
+  width: 1920px;
   margin: 0 auto;
 }
 .banner-wrap .banner {
@@ -409,6 +417,14 @@ body, html {
   background: red;
 }
 
+.hd-second-Sub-wrap {
+  content: '';
+  clear: both;
+  overflow: hidden;
+  display: block;
+  height: 0;
+}
+
 .home-DataSeries {
   padding-top: 20px;
   width: 1226px;
@@ -454,11 +470,14 @@ body, html {
   color: white;
 }
 .home-DataSeries .dscp .dscp-top {
-  margin-bottom: 15px;
+  margin-top: 30px;
   height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.home-DataSeries .dscp .dscp-top .dscp-top-left {
+  float: left;
 }
 .home-DataSeries .dscp .dscp-top .dscp-top-left p {
   border-left: 4px solid #ca694e;
@@ -473,6 +492,8 @@ body, html {
   font-size: 14px;
 }
 .home-DataSeries .dscp .dscp-top .dscp-top-right {
+  margin-left: 484px;
+  float: left;
   height: 30px;
   line-height: 30px;
   width: 516px;
@@ -487,39 +508,80 @@ body, html {
 .home-DataSeries .dscp .dscp-top .dscp-top-right a:hover {
   color: red;
 }
-.home-DataSeries .dscp .dscp-bottom .dscp-bottom-right {
-  display: inline-block;
+.home-DataSeries .dscp ul {
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
+  height: 630px;
 }
-.home-DataSeries .dscp .dscp-bottom .dscp-bottom-right {
+.home-DataSeries .dscp ul .pic-1 {
+  margin: 0;
+  padding: 0;
   display: inline-block;
-  width: 1000px;
-  float: right;
+  width: 226px;
+  height: 630px;
 }
-.home-DataSeries .dscp .dscp-bottom .dscp-bottom-right div {
-  background: white;
-  display: inline-block;
+.home-DataSeries .dscp ul .pic-1 img {
+  width: 100%;
+  height: 100%;
+}
+.home-DataSeries .dscp ul .pic-1 h4 {
+  display: none;
+}
+.home-DataSeries .dscp ul li {
+  text-align: center;
   width: 190px;
   height: 260px;
+  background: white;
   margin-bottom: 10px;
   padding: 25px;
   float: left;
   margin-left: 10px;
 }
-.home-DataSeries .dscp .dscp-bottom .dscp-bottom-right div:hover {
-  box-shadow: 1px 2px 3px 1px rgba(115, 115, 115, 0.3);
+.home-DataSeries .dscp ul li:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.home-DataSeries .dscp ul li img {
+  margin-bottom: 15px;
+  width: 160px;
+  height: 160px;
+}
+.home-DataSeries .dscp ul li p {
+  color: #000;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 15px;
+}
+.home-DataSeries .dscp ul li span {
+  margin-top: 30px;
+  line-height: 12px;
+  font-size: 12px;
+  margin-top: 17px;
+  color: #666666;
+  text-align: center;
+  overflow: hidden;
+  height: 12px;
+  display: block;
+}
+.home-DataSeries .dscp ul li h4 {
+  margin-top: 15px;
+  color: red;
 }
 .home-DataSeries .ktcp {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .home-DataSeries .ktcp .ktcp-top {
-  margin-bottom: 15px;
   height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .home-DataSeries .ktcp .ktcp-top .ktcp-top-left p {
-  border-left: 4px solid  #3a6de4;
+  border-left: 4px solid #ca694e;
   display: inline-block;
   width: 105px;
   padding-left: 13px;
@@ -527,7 +589,7 @@ body, html {
   color: #333333;
 }
 .home-DataSeries .ktcp .ktcp-top .ktcp-top-left a {
-  color: #3a6de4;
+  color: #ca694e;
   font-size: 14px;
 }
 .home-DataSeries .ktcp .ktcp-top .ktcp-top-right {
@@ -545,39 +607,81 @@ body, html {
 .home-DataSeries .ktcp .ktcp-top .ktcp-top-right a:hover {
   color: red;
 }
-.home-DataSeries .ktcp .ktcp-bottom .ktcp-bottom-right {
-  display: inline-block;
+.home-DataSeries .ktcp ul {
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
+  height: 630px;
 }
-.home-DataSeries .ktcp .ktcp-bottom .ktcp-bottom-right {
+.home-DataSeries .ktcp ul .pic-1 {
+  margin: 0;
+  padding: 0;
   display: inline-block;
-  width: 1000px;
-  float: right;
+  width: 226px;
+  height: 630px;
 }
-.home-DataSeries .ktcp .ktcp-bottom .ktcp-bottom-right div {
-  background: white;
-  display: inline-block;
+.home-DataSeries .ktcp ul .pic-1 img {
+  border: 0;
+  width: 226px;
+  height: 630px;
+}
+.home-DataSeries .ktcp ul .pic-1 h4 {
+  display: none;
+}
+.home-DataSeries .ktcp ul li {
+  text-align: center;
   width: 190px;
   height: 260px;
+  background: white;
   margin-bottom: 10px;
   padding: 25px;
   float: left;
   margin-left: 10px;
 }
-.home-DataSeries .ktcp .ktcp-bottom .ktcp-bottom-right div:hover {
-  box-shadow: 1px 2px 3px 1px rgba(115, 115, 115, 0.3);
+.home-DataSeries .ktcp ul li:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.home-DataSeries .ktcp ul li img {
+  margin-bottom: 15px;
+  width: 160px;
+  height: 160px;
+}
+.home-DataSeries .ktcp ul li p {
+  color: #000;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 15px;
+}
+.home-DataSeries .ktcp ul li span {
+  margin-top: 30px;
+  line-height: 12px;
+  font-size: 12px;
+  margin-top: 17px;
+  color: #666666;
+  text-align: center;
+  overflow: hidden;
+  height: 12px;
+  display: block;
+}
+.home-DataSeries .ktcp ul li h4 {
+  margin-top: 15px;
+  color: red;
 }
 .home-DataSeries .shjd {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .home-DataSeries .shjd .shjd-top {
-  margin-bottom: 15px;
   height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .home-DataSeries .shjd .shjd-top .shjd-top-left p {
-  border-left: 4px solid  #a72cbb;
+  border-left: 4px solid #ca694e;
   display: inline-block;
   width: 105px;
   padding-left: 13px;
@@ -585,7 +689,7 @@ body, html {
   color: #333333;
 }
 .home-DataSeries .shjd .shjd-top .shjd-top-left a {
-  color: #a72cbb;
+  color: #ca694e;
   font-size: 14px;
 }
 .home-DataSeries .shjd .shjd-top .shjd-top-right {
@@ -603,26 +707,69 @@ body, html {
 .home-DataSeries .shjd .shjd-top .shjd-top-right a:hover {
   color: red;
 }
-.home-DataSeries .shjd .shjd-bottom .shjd-bottom-right {
-  display: inline-block;
+.home-DataSeries .shjd ul {
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
+  height: 630px;
 }
-.home-DataSeries .shjd .shjd-bottom .shjd-bottom-right {
+.home-DataSeries .shjd ul .pic-1 {
+  margin: 0;
+  padding: 0;
   display: inline-block;
-  width: 1000px;
-  float: right;
+  width: 226px;
+  height: 630px;
 }
-.home-DataSeries .shjd .shjd-bottom .shjd-bottom-right div {
-  background: white;
-  display: inline-block;
+.home-DataSeries .shjd ul .pic-1 img {
+  border: 0;
+  width: 226px;
+  height: 630px;
+}
+.home-DataSeries .shjd ul .pic-1 h4 {
+  display: none;
+}
+.home-DataSeries .shjd ul li {
+  text-align: center;
   width: 190px;
   height: 260px;
+  background: white;
   margin-bottom: 10px;
   padding: 25px;
   float: left;
   margin-left: 10px;
 }
-.home-DataSeries .shjd .shjd-bottom .shjd-bottom-right div:hover {
-  box-shadow: 1px 2px 3px 1px rgba(115, 115, 115, 0.3);
+.home-DataSeries .shjd ul li:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.home-DataSeries .shjd ul li img {
+  margin-bottom: 15px;
+  width: 160px;
+  height: 160px;
+}
+.home-DataSeries .shjd ul li p {
+  color: #000;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 15px;
+}
+.home-DataSeries .shjd ul li span {
+  margin-top: 30px;
+  line-height: 12px;
+  font-size: 12px;
+  margin-top: 17px;
+  color: #666666;
+  text-align: center;
+  overflow: hidden;
+  height: 12px;
+  display: block;
+}
+.home-DataSeries .shjd ul li h4 {
+  margin-top: 15px;
+  color: red;
 }
 
 .footer {

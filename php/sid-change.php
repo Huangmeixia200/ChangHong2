@@ -6,6 +6,7 @@ if(isset($_GET['datasid'])){
     $sid = $_GET['datasid'];
     $result=$conn->query("select * from taobaogoods where sid=$sid");//返回sid对应的那条条数据给$result
     echo json_encode($result->fetch_assoc());//输出数据，json转换。
+    // 跳转页面
 }
 
 

@@ -20,13 +20,21 @@
 }
   $color:#666666;
   $warpwidth:1226px;
+  %cleafix {
+    //被继承的代码不会编码
+    content: '';
+    clear: both;
+    overflow: hidden;
+    display: block;
+    height: 0;
+}
   //这里是首页的核心数据
 .home-DataSeries{
   padding-top: 20px;
   width:$warpwidth;
   margin: auto;
   position: relative;
-  
+//   这里是激活
   #home-LeftNavigation li.active{
       background-color: red;
       color: white;
@@ -67,229 +75,342 @@
   }
         
 }
-  
   //这里是电视产品
-
-     .dscp{
-         //这里是上部分
-         .dscp-top{
-            margin-bottom: 15px;
+  .dscp{
+    // 这里是首页渲染的顶部  
+      .dscp-top{
+        margin-top: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+         .dscp-top-left{
+             float: left;
+             p{
+                border-left: 4px solid #ca694e;
+                display: inline-block;
+                width: 105px;
+                padding-left: 13px;
+                font-size: 22px;
+                color: #333333;
+             }
+             a{
+                   color:#ca694e ;
+                   font-size: 14px;
+               }
+         }
+        .dscp-top-right{
+            margin-left: 484px;
+            float: left;
             height: 30px;
+            line-height: 30px;
+            width: 516px;
             display: flex;
             flex-direction: row;
             justify-content:space-between;
-            .dscp-top-left{
-                p{  
-                    border-left: 4px solid #ca694e;
-                    display: inline-block;
-                    width: 105px;
-                    padding-left: 13px;
-                    font-size: 22px;
-                    color: #333333;
-                }
-                a{
-                    color:#ca694e ;
-                    font-size: 14px;
-                }
-            }
-            .dscp-top-right{
-                height: 30px;
-                line-height: 30px;
-                width: 516px;
-                display: flex;
-                flex-direction: row;
-                justify-content:space-between;
-                a{
-                    &:hover{
-                        color: red;
-                    }
-                    font-size: 14px;
-                    color: black;
-                }
-               
-            }
+            a{
+               &:hover{
+                   color: red;
+               }
+               font-size: 14px;
+               color: black;
+           }
 
-         }
-         //这里是下部分
-        .dscp-bottom{
-           .dscp-bottom-right{
+        }
+        
+      }
+    // 这里是首页渲染的底部 
+      ul{
+          margin-top: 15px;
+          overflow: hidden;
+          position: relative;
+          height: 630px;
+   
+          .pic-1{
+            margin: 0;
+            padding: 0;
             display: inline-block;
+             width: 226px;
+             height: 630px;
+               img{
+                   width:100%;
+                   height: 100%;
+               }
+               h4{
+                display: none;
+              }
                
            }
-           .dscp-bottom-right{
-               display: inline-block;
-               width: 1000px;
-               float: right;
-               div{
-                   &:hover{
-                       box-shadow: 1px 2px 3px 1px rgba(115, 115, 115, .3);
-                   }
-                background: white;
-                
-                display: inline-block;
-                width: 190px;
-                height: 260px;
-                margin-bottom: 10px;
-                padding: 25px;
-                float: left;
-                margin-left: 10px;
-                // display: flex;
-                // flex-wrap: wrap;
-                // flex-direction: row;
-                // justify-content: space-between;
-                // height: 260px;
        
+          li{
+              &:hover{
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+              }
+            text-align: center;
+            width: 190px;
+            height: 260px;
+            background: white;
+            margin-bottom: 10px;
+            padding: 25px;
+            float: left;
+            margin-left: 10px;
+              img{
+                  margin-bottom: 15px;
+                  width: 160px;
+                   height: 160px;
                }
-           }
-        }
-     }
-  
-  //这里是空调产品
-     .ktcp{
-         margin-top: 15px;
-        //这里是上部分
-        .ktcp-top{
-           margin-bottom: 15px;
-           height: 30px;
-           display: flex;
-           flex-direction: row;
-           justify-content:space-between;
-           .ktcp-top-left{
-               p{  
-                   border-left: 4px solid  #3a6de4;;
-                   display: inline-block;
-                   width: 105px;
-                   padding-left: 13px;
-                   font-size: 22px;
-                   color: #333333;
-               }
-               a{
-                   color: #3a6de4; ;
+              p{
+                color: #000;
+                font-size: 14px;
+                line-height: 14px;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                height: 15px;
+             }
+             span{
+                 margin-top: 30px;
+                line-height: 12px;
+                font-size: 12px;
+                margin-top: 17px;
+                color: #666666;
+                text-align: center;
+                overflow: hidden;
+                height: 12px;
+             
+                display: block;
+             }
+             h4{
+                margin-top: 15px;
+                 color: red;
+             }
+          }
+          
+      }
+
+  }
+  // 这是空调产品
+  .ktcp{
+    margin-top: 30px;
+      .ktcp-top{
+      
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+         .ktcp-top-left{
+             p{
+                border-left: 4px solid #ca694e;
+                display: inline-block;
+                width: 105px;
+                padding-left: 13px;
+                font-size: 22px;
+                color: #333333;
+             }
+             a{
+                   color:#ca694e ;
                    font-size: 14px;
                }
-           }
-           .ktcp-top-right{
-               height: 30px;
-               line-height: 30px;
-               width: 516px;
-               display: flex;
-               flex-direction: row;
-               justify-content:space-between;
-               a{
-                   &:hover{
-                       color: red;
-                   }
-                   font-size: 14px;
-                   color: black;
+         }
+        .ktcp-top-right{
+            height: 30px;
+            line-height: 30px;
+            width: 516px;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            a{
+               &:hover{
+                   color: red;
                }
-              
+               font-size: 14px;
+               color: black;
            }
 
         }
-        //这里是下部分
-       .ktcp-bottom{
-          .ktcp-bottom-right{
-           display: inline-block;
-              
+        
+      }
+    // 这里是首页渲染的底部 
+    ul{
+      margin-top: 15px;
+      overflow: hidden;
+      position: relative;
+      height: 630px;
+      .pic-1{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+         width: 226px;
+         height: 630px;
+           img{
+              border: 0;
+               width:226px;
+               height: 630px;
+           }
+           h4{
+            display: none;
           }
-          .ktcp-bottom-right{
-              display: inline-block;
-              width: 1000px;
-              float: right;
-              div{
-                &:hover{
-                    box-shadow: 1px 2px 3px 1px rgba(115, 115, 115, .3);
-                }
-               background: white;
-               display: inline-block;
-               width: 190px;
-               height: 260px;
-               margin-bottom: 10px;
-               padding: 25px;
-               float: left;
-               margin-left: 10px;
-               // display: flex;
-               // flex-wrap: wrap;
-               // flex-direction: row;
-               // justify-content: space-between;
-               // height: 260px;
-      
-              }
-          }
+           
+       }
+   
+       li{
+        &:hover{
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+        }
+      text-align: center;
+      width: 190px;
+      height: 260px;
+      background: white;
+      margin-bottom: 10px;
+      padding: 25px;
+      float: left;
+      margin-left: 10px;
+        img{
+            margin-bottom: 15px;
+            width: 160px;
+             height: 160px;
+         }
+        p{
+          color: #000;
+          font-size: 14px;
+          line-height: 14px;
+          text-align: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          height: 15px;
+       }
+       span{
+           margin-top: 30px;
+          line-height: 12px;
+          font-size: 12px;
+          margin-top: 17px;
+          color: #666666;
+          text-align: center;
+          overflow: hidden;
+          height: 12px;
+       
+          display: block;
+       }
+       h4{
+          margin-top: 15px;
+           color: red;
        }
     }
- //这里是生活家电
- .shjd{
-    margin-top: 15px;
-   //这里是上部分
-   .shjd-top{
-      margin-bottom: 15px;
-      height: 30px;
-      display: flex;
-      flex-direction: row;
-      justify-content:space-between;
-      .shjd-top-left{
-          p{  
-              border-left: 4px solid  #a72cbb;;
-              display: inline-block;
-              width: 105px;
-              padding-left: 13px;
-              font-size: 22px;
-              color: #333333;
-          }
-          a{
-              color: #a72cbb; 
-              font-size: 14px;
-          }
-      }
-      .shjd-top-right{
-          height: 30px;
-          line-height: 30px;
-          width: 516px;
-          display: flex;
-          flex-direction: row;
-          justify-content:space-between;
-          a{
-              &:hover{
-                  color: red;
-              }
-              font-size: 14px;
-              color: black;
-          }
-         
-      }
-
-   }
-   //这里是下部分
-  .shjd-bottom{
-     .shjd-bottom-right{
-      display: inline-block;
-         
-     }
-     .shjd-bottom-right{
-         display: inline-block;
-         width: 1000px;
-         float: right;
-         div{
-            &:hover{
-                box-shadow: 1px 2px 3px 1px rgba(115, 115, 115, .3);
-            }
-          background: white;
-          display: inline-block;
-          width: 190px;
-          height: 260px;
-          margin-bottom: 10px;
-          padding: 25px;
-          float: left;
-          margin-left: 10px;
-          // display: flex;
-          // flex-wrap: wrap;
-          // flex-direction: row;
-          // justify-content: space-between;
-          // height: 260px;
- 
-         }
-     }
+      
   }
-}
+
+  }
+ //这里是生活家电    
+ .shjd{
+    margin-top: 30px;
+      .shjd-top{
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+         .shjd-top-left{
+             p{
+                border-left: 4px solid #ca694e;
+                display: inline-block;
+                width: 105px;
+                padding-left: 13px;
+                font-size: 22px;
+                color: #333333;
+             }
+             a{
+                   color:#ca694e ;
+                   font-size: 14px;
+               }
+         }
+        .shjd-top-right{
+            height: 30px;
+            line-height: 30px;
+            width: 516px;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            a{
+               &:hover{
+                   color: red;
+               }
+               font-size: 14px;
+               color: black;
+           }
+
+        }
+        
+      }
+    // 这里是首页渲染的底部 
+    ul{
+      margin-top: 15px;
+      overflow: hidden;
+      position: relative;
+      height: 630px;
+      .pic-1{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+         width: 226px;
+         height: 630px;
+           img{
+              border: 0;
+               width:226px;
+               height: 630px;
+           }
+           h4{
+             display: none;
+           }
+           
+       }
+   
+       li{
+        &:hover{
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+        }
+      text-align: center;
+      width: 190px;
+      height: 260px;
+      background: white;
+      margin-bottom: 10px;
+      padding: 25px;
+      float: left;
+      margin-left: 10px;
+        img{
+            margin-bottom: 15px;
+            width: 160px;
+             height: 160px;
+         }
+        p{
+          color: #000;
+          font-size: 14px;
+          line-height: 14px;
+          text-align: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          height: 15px;
+       }
+       span{
+           margin-top: 30px;
+          line-height: 12px;
+          font-size: 12px;
+          margin-top: 17px;
+          color: #666666;
+          text-align: center;
+          overflow: hidden;
+          height: 12px;
+       
+          display: block;
+       }
+       h4{
+          margin-top: 15px;
+           color: red;
+       }
+    }
+      
+  }
+
+  }
     }

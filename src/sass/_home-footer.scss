@@ -17,6 +17,7 @@
 $color:#666666;
 $warpwidth:1226px;
 .footer{
+    // overflow: hidden;
     background: #efefef;
     margin-top: 60px;
     height: 564px;
@@ -95,7 +96,7 @@ $warpwidth:1226px;
                     }
                   
                 }
-      
+                // 这里写没作用 放到最下面写了
             .footer-Top-bottom-Left-right-bottom{
               
 
@@ -119,7 +120,7 @@ $warpwidth:1226px;
 
 
 }
-  // 这里是脚部第一部分的下层的右边  写在这里样式无效 不知道为什么 所以我写在了内联里
+  // 这里是脚部第一部分的下层的右边  写在这里样式无效 
    
 .footer-Top-bottom-Right {
     float: left;
