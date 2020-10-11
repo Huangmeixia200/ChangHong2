@@ -1,0 +1,78 @@
+@mixin box-shadow($value:2px, $value:0px,$value: 5px,$value:3px,$value: rgba(0, 0, 0, .3)){
+    box-shadow: $value, $value ,$value, $value, $value;
+    //水平 垂直 模糊距离  阴影尺寸 颜色 
+} ;
+ // box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+ @mixin position($direction:left, $positionvalue:absolute, $value1:10px, $value2:10px) {
+    @if ($direction==left) {
+        position: $positionvalue;
+        left: $value1;
+        top: $value2;
+    }
+    @else {
+        position: $positionvalue;
+        right: $value1;
+        bottom: $value2;
+        
+    }
+}
+@mixin borderstyle($size:1px, $style:solid, $color:black) {
+    border: $size $style $color;
+}
+  $color:#666666;
+  $warpwidth:1226px;
+  $center:0 auto;
+
+//   这里是列表页渲染的头部
+.list-wrap{
+    width: $warpwidth;
+    margin:$center ;
+    background: white;
+}
+.tip{
+    text-align: right;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+// .list-DataSerious{
+//     height: 236px;
+//     padding: 0 38px;
+//     background: #ffffff;
+//     border: 1px solid #e8e8e8;
+//     position: relative;
+//     margin-bottom: 60px;
+//     div{
+//         height: 28px;
+//         width: 1150px;
+//         margin-left: 30px;
+//         border: 1px solid ;
+//     }
+//     .qb{
+//         display: block;
+//         margin-top: 14px;
+//         margin-bottom: 14px;
+//         height: 28px;
+//         width: 76px;
+//         font-size: 14px;
+//         color: #f12020;
+//         border: 1px solid #f12020;
+//         margin-left: 85px;
+//         line-height: 28px;
+//         text-align: center;
+      
+//     }
+//     span{
+//         border: 1px solid ;
+//         width: 85px;
+//         height: 58px;
+//         line-height: 58px;
+//         font-size: 14px;
+//         color: #505050;
+//         float: left;
+//     }
+
+
+// }
+

@@ -5,11 +5,11 @@ define([], function() {
         dscp: ! function() { //渲染
             const ul = $('.dscp-bottom ul');
             $.ajax({
-                url: 'http://192.168.11.77/myself/changhong1/php/home-dscp.php',
+                url: 'http://192.168.11.77/myself/ChangHong/php/home-dscp.php',
                 dataType: 'json'
             }).done(function(data) {
                 //进行渲染结构代码。
-                console.log(data);
+                // console.log(data);
                let strhtml='';
             
 
@@ -40,11 +40,10 @@ define([], function() {
         ktcp: ! function() { 
             const ul = $('.ktcp-bottom ul');
             $.ajax({
-                url: 'http://192.168.11.77/myself/changhong1/php/home-ktcp.php',
+                url: 'http://192.168.11.77/myself/ChangHong/php/home-ktcp.php',
                 dataType: 'json'
             }).done(function(data) {
                 //进行渲染结构代码。
-                console.log(data);
                let strhtml='';
             
 
@@ -76,11 +75,10 @@ define([], function() {
         shjd: ! function() { 
             const ul = $('.shjd-bottom ul');
             $.ajax({
-                url: 'http://127.0.0.1/myself/changhong1/php/home-shjd.php',
+                url: 'http://192.168.11.77/myself/ChangHong/php/home-shjd.php',
                 dataType: 'json'
             }).done(function(data) {
                 //进行渲染结构代码。
-                console.log(data);
                let strhtml='';
             
 
@@ -100,8 +98,6 @@ define([], function() {
                ul.html(strhtml); //追加数据
                $("img.lazy").lazyload({
                 effect: "fadeIn" //图片显示方式
-
-
             });
 
 

@@ -199,14 +199,14 @@ body,html{
 // 这里是导航第二部分
 
 .hd-Second{
-    background-color: red;
-    position: relative;
+    @include position('null', relative, 0px,0px);
     height: 81px;
     background:white;
     width: 100%;
     .hd-Second-wrap{
-        width:1226px;
+        width:$warpwidth;
         margin: $center;
+        // 这里是左边的第一张图
         h1{ 
             img{
                 width: 100%;
@@ -216,9 +216,9 @@ body,html{
             height: 81px;
             float: left;
         }
+        // 中间部分的导航
         .hd-second-nav{
-          margin-right: 20px;
-          margin-left: 30px;
+          margin:0  20px 0 30px;
           line-height: 81px;
           text-align: center;
           li{   
@@ -246,8 +246,7 @@ body,html{
 .hd-second-Sub-wrap{
     z-index: 100;
     display: none;
-    // overflow: hidden;
-    @extend %cleafix;
+    overflow: hidden;
     height: 229px;
     background: #ffffff;
     border-top: 1px solid #eeeeee;

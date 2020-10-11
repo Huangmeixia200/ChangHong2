@@ -20,5 +20,5 @@ require.config({
 
 //加载模块
 require(['jquery','jq_cookie','jq_lazyload'], function() {
-    require(['home-DataSeries']);
+    require(['home-DataSeries','home-banner','home-floor']);
 });

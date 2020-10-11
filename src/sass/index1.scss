@@ -1,26 +1,6 @@
-@charset "utf-8";   //设置中文
-body,html, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, textarea, p, a, span{
-    margin: 0;
-    padding: 0;
-}
-a{
-    text-decoration: none;
-}
-li{
-    list-style: none;
-}
-body {
-    font-family: "Microsoft YaHei", "微软雅黑", "Arial", sans-serif;
-    background: #f9f9f9;
-    // min-width: 1345px;
-  
-}
-body,html{
-    width: 100%;
-    box-sizing: border-box;
-}
 
 // input,select,option,textarea{outline: none;}
+@import "public";
 @import "toolbar-nav";
 @import "banner";
 @import "home-DataSeries";
