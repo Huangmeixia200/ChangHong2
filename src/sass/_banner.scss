@@ -43,24 +43,21 @@ $center:0 auto;
         @include position('null', relative, 0px, 0px);
         z-index: 1;
         overflow: hidden;
-       .banner-images{
-           .banner-1{
-            @include opacityvalue(1) ;
 
-           }
-           img{
-            z-index: 2;
-            @include position(left, absolute, 0px, 0px);
-            @include opacityvalue(0) ;
-        }
+       .banner-images{
+             li{
+                     z-index: 2;
+                     @include position(left, absolute, 0px, 0px);
+                     @include opacityvalue(0) 
+             }
+        
        } 
         //这里是四个小按钮
         .ban-btn{ 
              z-index: 888;
              @include position(right, absolute, 400px, 20px);
-            //  z-index: 455;
             li{
-                    display: inline-block;
+                 display: inline-block;
                  height: 10px;
                  width:  10px;
                  background-color:white;    
@@ -71,8 +68,6 @@ $center:0 auto;
              
         
         }
-    
-
         //这里是二级菜单
        .second-menu{
                width: $warpwidth;

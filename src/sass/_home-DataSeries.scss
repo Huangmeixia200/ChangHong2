@@ -16,9 +16,6 @@
         
     }
 }
-@mixin borderstyle($size:1px, $style:solid, $color:black) {
-    border: $size $style $color;
-}
   $color:#666666;
   $warpwidth:1226px;
   %cleafix {
@@ -35,8 +32,6 @@
   width:$warpwidth;
   margin: auto;
   position: relative;
-
-
 //   这里是激活
   #home-LeftNavigation li.active{
       background-color: red;
@@ -133,8 +128,8 @@
             margin: 0;
             padding: 0;
             display: inline-block;
-             width: 226px;
-             height: 630px;
+            width: 226px;
+            height: 630px;
                img{
                    width:100%;
                    height: 100%;

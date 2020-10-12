@@ -1,23 +1,24 @@
 @charset "utf-8"; //设置中文字符
+
 @mixin borderstyle($size:1px, $style:solid, $color:#111) {
     border: $size $style $color;
 } //边框
-@mixin tanxinghe($flex:flex, $flex-direcion:row, $flex-warp:wrap, $justify-content: space-around, $width:1200px, $height:200px) {
-    display: flex; //设置盒子为弹性盒
-    flex-direction: row; //设置横向排列,
+
+@mixin tangxinghe($flex:flex, $flex-direcion:row, $flex-warp:wrap, $justify-content: space-around) {
+    display: $flex; //设置盒子为弹性盒
+    flex-direction: $flex-direcion; //设置横向排列,
     // flex-direction: column;//设置竖向排列
-    flex-wrap: wrap; //自动折行
-    // flex-wrap: nowrap;//换行，第一行在上方
+    flex-wrap: $flex-warp; //自动折行
+    // flex-wrap: nowrap;//不换行
     // flex-wrap: wrap-reverse;//换行，第一行在下方。
-    justify-content: space-around; //主轴上的对齐方式:每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍
+    justify-content:$justify-content; //主轴上的对齐方式:每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍
     // justify-content: flex-start; //（默认值）：左对齐
     // justify-content: flex-end; //右对齐
     // justify-content: center; //居中
     // justify-content:space-between;//两端对齐，项目之间的间隔都相等。;
     // justify-content: space-evenly; //项目是分布的，以便任何两个项目之间的间距（和边缘的空间）相等。
-    width: $width;
-    height: $height;
 } //弹性盒设置
+
 @mixin position($style:absolute, $t:0px, $l:0px, $r:0px, $b:0px) {
     position: $style; //absolute:绝对定位；相对于父元素或者body进行定位;relative:相对定位；相对于当前位置进行定位;fixed:	
     // 固定定位；相对于浏览器的页面进行定位；inherit:继承父元素的position的属性
@@ -26,19 +27,101 @@
     right: $r;
     bottom: $b;
 }
-
+ //边框圆角
 @mixin radius {
     border-radius: 10px;
 }
+ //文本溢出隐藏
+@mixin ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
+//透明度
+@mixin opacityvalue($value:0.1) {
+    opacity: $value;
+    filter: alpha(opacity=$value*100);
+}
+//遍历盒子 让各种自己想要的盒子里面带遍历值
+//@each $var in list {}  任意值遍历  $var 表示list里面的值
+ @each $var in left,
+ middle,
+ right {
+     .box_#{$var} {
+         background-image: url('img/banner_#{$var}.jpg');
+     }
+ }
+
+ //清浮动
+ %cleafix {
+    //被继承的代码不会编码
+    content: '';
+    clear: both;
+    overflow: hidden;
+    display: block;
+    height: 0;
+}
+//运动
+ @mixin move($attr:transition, $value:10px) {
+     -webkit-#{$attr}: $value;
+     -moz-#{$attr}: $value;
+     -o-#{$attr}: $value;
+     -ms-#{$attr}: $value;
+     #{$attr}: $value;
+ }
+
+
+//清除各种浏览器里面的属性兼容问题
+@mixin move($attr:transition, $value:10px) {
+    -webkit-#{$attr}: $value;
+    -moz-#{$attr}: $value;
+    -o-#{$attr}: $value;
+    -ms-#{$attr}: $value;
+    #{$attr}: $value;
+}
+//
+//宽 高 行高
+@mixin  width-height-line-height($width:200px,$height:60px,$line-height:60px){
+    width:$width;
+    height: $height;
+    line-height: $line-height;
+ 
+}
+//宽高
+@mixin w-h($width:1226px,$height:500px){
+    width: $width;
+    height: $height;
+}
+
+
+ //怪异盒模型
+ $box-sizing:border-box;
 // 这里是公共值 
-ul {
+ul,ol,dl{
     list-style: none;
 }
 
 a {
     text-decoration: none;
 }
+ 
+//清除默认样式
+ input,select,option,textarea{
+    outline: none;
+    border: 0;
+}
+//清除标签默认样式
+em,strong,i,u,b,strong{
+    font-style:normal;
+    font-weight:normal;
+ }
+ h1,h2,h3,h4,h5,h6{
+
+    font-weight:normal;
+ 
+ } 
+
 
 html,
 body,
@@ -68,17 +151,11 @@ img {
     padding: 0;
 }
 
+
 body {
     font-family: "Microsoft YaHei", "微软雅黑", "Arial", sans-serif;
     background: #f9f9f9;
-    // min-width: 1345px;
-  
 }
-body,html{
-    width: 100%;
-    box-sizing: border-box;
-}
-
 body,html{
     width: 100%;
     box-sizing: border-box;

@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
     <meta name="description" content="长虹，四川长虹，长虹官网,长虹智能电视，长虹集团,长虹电视,虹创有品，长虹空调,长虹小家电，长虹官方商城，长虹售后服务，虹创有品，长虹电竞显示器，长虹手机，长虹日电，CHIQ空调，CHIQ电视，长虹厨卫,长虹激光电视，长虹美菱，67°蛋机，D6P,Q5T，Q5R，Q5K" />
     <meta name="Keywords" content=" 四川长虹集团官方产品网站，提供智慧家庭智能家电全套解决方案，长虹彩电、空调、热 水器、厨卫、手机、日电小家电、新能源、美菱冰箱、美菱洗衣机等最新最全产品信息查询及购买，会员权益，优惠活动，购买渠道选择、网上报装报修、售后服务等一站式体验" />
-    <script src="./script/require.js" defer async="true" data-main="./script/home-main.js"></script>
+    <script src="./script/require.js" defer async="true" data-main="./script/list-main.js"></script>
     <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="script/iconfont/iconfont.css">
+    <link rel="stylesheet" href="script/iconfont/iconfont.js">
+    <link rel="stylesheet" href="css/pagination.css">
 
 
 </head>
@@ -419,17 +422,39 @@
 
         </div>
     </div>
-    <!-- 这里是列表页的渲染 -->
+   <!-- 这是主体部分 -->
     <div class="list-wrap">
+        <div class="tip"> 帮您选择</div>
+      <!-- 渲染部分 -->
 
+        <div class="list-option">
+            <button>默认排序</button>
+            <button>上升排序</button>
+            <button>降序排序</button>
+        </div>
+        
+   <!-- 这里是列表页的渲染 -->
+    <div class="list-DataSeries">
+      <ol class="DataSeries">
+        <!-- <li class="list-${value.sid}">
+            <img class="lazy" data-original="${value.url}" >
+            <i>${value.title}</i>
+            <b>${value.title2}</b>
+            <p> <h3> ￥${value.price}</h3> <h6>0人评价</h6> </p>
+            <div><span class="iconfont"> &#xf0179;</span> 加入购物车 </div>
+       </li> -->
+      </ol>
+    </div> 
     
-    <div class="tip"> 全部结果</div>
-    <div class="list-DataSerious">
-       <div> <span>产品类型:</span><span class="qb">壁挂式</span><span>立柜式</span><span>中央空调</span></div>
-       <div> <span>工作方式:</span><span class="qb">壁挂式</span><span>立柜式</span><span>中央空调</span></div>
-       <div> <span>冷暖方式:</span><span class="qb">壁挂式</span><span>立柜式</span><span>中央空调</span></div>
-       <div> <span>空调效率:</span><span class="qb">壁挂式</span><span>立柜式</span><span>中央空调</span></div>
+    <div class="pagelist">
+        <div class="m-style page">
+        </div>
     </div>
+
+       
+
+
+   
 </div>
 
       <!-- 这里是脚部 -->

@@ -80,14 +80,12 @@ define([], function() {
             }).done(function(data) {
                 //进行渲染结构代码。
                let strhtml='';
-            
-
                $.each(data,function(index,value){
                
                 strhtml += `
                  <li class="pic-${value.sid}">
                  <a href="https://cn.changhong.com/cpzx/bx/bingxiang/dm/201902/t20190228_73655.html?f=floor?sid=${value.sid}" >
-                     <img class="lazy" data-original="${value.src}" width="200" height="200" >
+                     <img class="lazy" data-original="${value.src}" >
                      <p>${value.title}</p>
                      <span>${value.detai}</span>
                      <h4>￥${value.peice}</h4>

@@ -68,3 +68,7 @@ define([], function() {
     }
     
 });
+
+<p>${value.title}</p>
+<span>${value.detal}</span>
+<h4>￥${value.price}</h4>

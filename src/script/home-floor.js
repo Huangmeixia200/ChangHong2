@@ -37,24 +37,23 @@ define([], function() {
             if (loucengtop >= top) {
                 $('#home-LeftNavigation li').removeClass('active');
                 $('#home-LeftNavigation li').eq($(this).index()).addClass('active');
-                return false; //返回 'false' 将停止循环，有一个满足条件终止循环。
+                return false; 
             }
         });
     }
     scroll();
-    //滚轮事件触发
+   
     $(window).on('scroll', function() {
         scroll();
     });
 
-    //2.点击左侧楼梯上面的按钮，右侧楼层运动到对应的位置。
-    //求每一个楼层top位置。将固定的top值给滚动条的top值。document.documentElement.scrollTop
+   
 
     $('#home-LeftNavigation li').not('.last').on('click', function() {
         $(this).addClass('active').siblings().removeClass('active');
         let loucengtop = $('#louceng').eq($(this).index()).offset().top; //获取楼梯对应楼层固定的top值。
         $('html').animate({
-            scrollTop: loucengtop //运动不仅可以改变css，还可以设置html属性
+            scrollTop: loucengtop 
         });
     });
       

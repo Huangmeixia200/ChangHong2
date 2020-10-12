@@ -1,21 +1,10 @@
+@import "public";
 @mixin box-shadow($value:2px, $value:0px,$value: 5px,$value:3px,$value: rgba(0, 0, 0, .3)){
     box-shadow: $value, $value ,$value, $value, $value;
     //水平 垂直 模糊距离  阴影尺寸 颜色 
 } ;
  // box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
- @mixin position($direction:left, $positionvalue:absolute, $value1:10px, $value2:10px) {
-    @if ($direction==left) {
-        position: $positionvalue;
-        left: $value1;
-        top: $value2;
-    }
-    @else {
-        position: $positionvalue;
-        right: $value1;
-        bottom: $value2;
-        
-    }
-}
+
 @mixin borderstyle($size:1px, $style:solid, $color:black) {
     border: $size $style $color;
 }
@@ -26,53 +15,105 @@
 //   这里是列表页渲染的头部
 .list-wrap{
     width: $warpwidth;
-    margin:$center ;
-    background: white;
+    margin:$center;
+    text-align: center;
+    .tip{
+        float: left;
+        @include width-height-line-height(200px,48px,48px);
+        font-size: 16px;
+        color: #333333;
+        background: #f1f1f1;
+    }
+    .list-option{
+     
+        width: 1000px;
+        background: #f1f1f1;
+        float: right;
+        overflow: hidden;
+        button{
+            border: 1px solid #e6e6e6;
+            float: left;
+           @include width-height-line-height(84px,45px,45px);
+           @include radius();
+           margin-left: 20px;
+            &:hover{
+                background: red;
+                color: white;
+            }
+        }
+    }
+  //激活选项的样式
+//  .list-option li.active{
+//        width: 110px;
+//        color: red;
+//        background: white;
+//   }
+ 
+   //这是列表页的渲染
+.list-DataSeries{
+  
+    width: 1000px;
+ .DataSeries{
+     @include tangxinghe(flex,row,wrap,space-evenly);
+ } 
+    overflow: hidden;
+        li{  
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 14px;
+            $box-sizing:border-box;
+            background: white;
+            width: 240px;
+            @include tangxinghe(flex,column,wrap,space-around);
+            @include w-h(240px,360px);
+        &:hover{
+               box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+        }
+         i,b,p,.jiage,.gwc{
+               display: block;
+               @include width-height-line-height(190px,22px,22px);
+               margin: 0 auto;
+            };
+         h3,h6{
+              display: inline-block;
+     
+            }
+         img{
+               @include w-h(190px,190px);
+               margin: 0 auto;
+            }
+          i{
+              color: #000;
+              font-size: 16px;
+              @include ellipsis();
+           }
+         b{
+              font-size: 12px;
+              color:  #666;
+           }
+         .jiage{
+              @include tangxinghe();
+              @include width-height-line-height(190px,22px,22px);
+             h3{
+                        color: red;
+                        float: left;
+                    }
+                    h6{
+                       //  float: right;
+                       color: #999999;
+                    }
+
+         }
+          
+           .gwc{
+            @include width-height-line-height(190px,22px,22px);
+             color:  #f12020; 
+           }
+   
+  
+  }
+ }   
 }
-.tip{
-    text-align: right;
-    float: left;
-    height: 30px;
-    line-height: 30px;
-    font-size: 14px;
-}
-// .list-DataSerious{
-//     height: 236px;
-//     padding: 0 38px;
-//     background: #ffffff;
-//     border: 1px solid #e8e8e8;
-//     position: relative;
-//     margin-bottom: 60px;
-//     div{
-//         height: 28px;
-//         width: 1150px;
-//         margin-left: 30px;
-//         border: 1px solid ;
-//     }
-//     .qb{
-//         display: block;
-//         margin-top: 14px;
-//         margin-bottom: 14px;
-//         height: 28px;
-//         width: 76px;
-//         font-size: 14px;
-//         color: #f12020;
-//         border: 1px solid #f12020;
-//         margin-left: 85px;
-//         line-height: 28px;
-//         text-align: center;
-      
-//     }
-//     span{
-//         border: 1px solid ;
-//         width: 85px;
-//         height: 58px;
-//         line-height: 58px;
-//         font-size: 14px;
-//         color: #505050;
-//         float: left;
-//     }
 
 
-// }
 

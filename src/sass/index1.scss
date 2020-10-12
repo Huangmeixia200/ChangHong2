@@ -1,80 +1,9 @@
 
-// input,select,option,textarea{outline: none;}
 @import "public";
 @import "toolbar-nav";
 @import "banner";
 @import "home-DataSeries";
 @import "home-footer";
 
-// @mixin ellipsis($w:300px, $h:30px) {
-//     width: $w;
-//     height: $h;
-//     line-height: $h;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     text-overflow: ellipsis;
-// }
-// @mixin move($attr:transition, $value:10px) {
-//     -webkit-#{$attr}: $value;
-//     -moz-#{$attr}: $value;
-//     -o-#{$attr}: $value;
-//     -ms-#{$attr}: $value;
-//     #{$attr}: $value;
-// }
-// %cleafix {
-//     //被继承的代码不会编码
-//     content: '';
-//     clear: both;
-//     overflow: hidden;
-//     display: block;
-//     height: 0;
-// }
-
-// @mixin position($direction:left, $positionvalue:absolute, $value1:10px, $value2:10px) {
-//     @if ($direction==left) {
-//         position: $positionvalue;
-//         left: $value1;
-//         top: $value2;
-//     }
-//     @else {
-//         position: $positionvalue;
-//         right: $value1;
-//         bottom: $value2;
-//     }
-// }
-// @mixin borderstyle($size:1px, $style:solid, $color:black) {
-//     border: $size $style $color;
-// }
- 
-// @each $var in list {}  任意值遍历  $var 表示list里面的值
-// // @each $var in left,
-// // middle,
-// // right {
-// //     .box_#{$var} {
-// //         background-image: url('img/banner_#{$var}.jpg');
-// //     }
-// // }
-
-// @mixin opacityvalue($value:0.1) {
-//     opacity: $value;
-//     filter: alpha(opacity=$value*100);
-// }
-
-// @mixin ellipsis($w:300px, $h:30px) {
-//     width: $w;
-//     height: $h;
-//     line-height: $h;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     text-overflow: ellipsis;
-// }
 
 
-
-// @mixin move($attr:transition, $value:10px) {
-//     -webkit-#{$attr}: $value;
-//     -moz-#{$attr}: $value;
-//     -o-#{$attr}: $value;
-//     -ms-#{$attr}: $value;
-//     #{$attr}: $value;
-// }
