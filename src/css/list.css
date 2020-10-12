@@ -475,7 +475,7 @@ body, html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 .list-wrap .list-DataSeries li {
   text-align: center;
@@ -523,7 +523,7 @@ body, html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 190px;
   height: 22px;
   line-height: 22px;

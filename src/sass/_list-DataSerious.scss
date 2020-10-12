@@ -54,7 +54,7 @@
   
     width: 1000px;
  .DataSeries{
-     @include tangxinghe(flex,row,wrap,space-evenly);
+     @include tangxinghe();
  } 
     overflow: hidden;
         li{  

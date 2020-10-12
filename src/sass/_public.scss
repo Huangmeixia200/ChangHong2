@@ -4,7 +4,7 @@
     border: $size $style $color;
 } //边框
 
-@mixin tangxinghe($flex:flex, $flex-direcion:row, $flex-warp:wrap, $justify-content: space-around) {
+@mixin tangxinghe($flex:flex, $flex-direcion:row, $flex-warp:wrap, $justify-content: flex-start) {
     display: $flex; //设置盒子为弹性盒
     flex-direction: $flex-direcion; //设置横向排列,
     // flex-direction: column;//设置竖向排列

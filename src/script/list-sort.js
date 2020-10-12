@@ -77,6 +77,9 @@ define(['jq_paginationjs'], function() {
                         `;
                     });
                    list.html(str);
+                   $('img.lazy').lazyload({
+                    effect:"fadeIn"
+                })
                     array_default = []; //排序前的li数组
                     array = []; //排序中的数组
                     prev = null;
@@ -90,7 +93,7 @@ define(['jq_paginationjs'], function() {
             }
     
         });
-    }();
+    }()
     }
    
     
