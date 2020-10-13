@@ -941,7 +941,6 @@ body, html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  float: right;
   border-left: 1px solid #999999;
   width: 209px;
   height: 151px;
@@ -956,13 +955,13 @@ body, html {
   line-height: 32px;
 }
 .footer-Top-bottom-Right .footer-Top-bottom-Right-right img {
-  height: 108px;
   width: 108px;
+  height: 108px;
   margin-left: 30px;
 }
 
 .footer-Bottom {
-  padding: 20px;
+  padding: 30px;
   height: 224px;
   background-color: #333333;
 }
@@ -977,20 +976,19 @@ body, html {
   height: 36px;
   vertical-align: middle;
   margin-bottom: 19px;
-  margin-top: 20px;
 }
 .footer-Bottom .footer-bottom-wrap .footer-bottom .foot-txt {
   font-size: 12px;
   line-height: 24px;
   color: #999999;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .footer-Bottom .footer-bottom-wrap .footer-bottom .foot-note {
   vertical-align: middle;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 144px;
 }
 .footer-Bottom .footer-bottom-wrap .footer-bottom .foot-note p {
   font-size: 12px;
@@ -1000,12 +998,12 @@ body, html {
   line-height: 32px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .footer-Bottom .footer-bottom-wrap .footer-bottom .foot-note img {
   display: inline-block;
-  margin-right: 10px;
-  margin-top: 8px;
+  margin: 6px 10px 0 0;
   width: 20px;
   height: 20px;
 }

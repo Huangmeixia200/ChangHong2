@@ -3,19 +3,7 @@
     //水平 垂直 模糊距离  阴影尺寸 颜色 
 } ;
  // box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
- @mixin position($direction:left, $positionvalue:absolute, $value1:10px, $value2:10px) {
-    @if ($direction==left) {
-        position: $positionvalue;
-        left: $value1;
-        top: $value2;
-    }
-    @else {
-        position: $positionvalue;
-        right: $value1;
-        bottom: $value2;
-        
-    }
-}
+
   $color:#666666;
   $warpwidth:1226px;
   %cleafix {

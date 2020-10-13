@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin:*');   //任意地址都可以访问
+header('Access-Control-Allow-Method:POST,GET');  //跨越请求的方式
 include "conn.php";//引入数据库连接代码。
 $result = $conn->query("select * from changhong1"); //获取数据的结果集(记录集)
 $num = $result->num_rows; //记录集的总条数  22

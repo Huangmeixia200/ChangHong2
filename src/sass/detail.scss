@@ -1,0 +1,68 @@
+@import "public";
+@import "toolbar-nav";
+@import "home-footer";
+.car-detail{
+    overflow: hidden;
+    .car-detail-wrap{
+        background: rosybrown;
+        overflow: hidden;
+        position: relative;
+        @include warp-center();
+        height: 700px;
+       @include tangxinghe(row,wrap,space-between);
+       
+        .pic{
+        //  @include tangxinghe(row,wrap,flex-start);
+
+            #spic{  //放小放大镜的地方
+             border: 1px solid;
+             background: silver;
+             @include w-h(510px,510px);
+             border: #666666;
+             #smallpic{ //小图
+                @include w-h(510px,510px);
+                border: 0;
+                
+             }
+             #sf{  //小放大镜
+                z-index: 99;
+                display: none;
+                @include w-h(204px,204px);
+                @include position(left,absolute,20px,20px);
+                background: #F8B600;
+                border: 1px solid #987777;
+                @include opacityvalue(0.4);
+
+              }
+          }
+          #bf{//这个是大放大镜
+            display: none;
+            @include position(left,absolute,510px,0px);
+            @include w-h(510px,510px);
+            border: 1px solid;
+            border: #666666;
+            background: royalblue;
+            overflow: hidden;
+              img{
+                @include w-h(1275px,1275px);
+              }
+          }
+      }
+      
+   
+   }
+}
+//这里是轮播图
+#ulist{
+ @include w-h(510px,106px);
+ @include position(left,absolute,0px,540px);
+ background: pink;
+
+}
+
+  //这个是购物车右侧的详情
+ #goodsinfo-word{
+     margin-left: -40px;
+   @include w-h(650px,510px);
+   background: green;
+}

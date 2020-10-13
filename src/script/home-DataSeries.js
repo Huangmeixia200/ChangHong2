@@ -31,7 +31,6 @@ define([], function() {
                $("img.lazy").lazyload({
                 effect: "fadeIn" //图片显示方式
 
-
             });
 
 

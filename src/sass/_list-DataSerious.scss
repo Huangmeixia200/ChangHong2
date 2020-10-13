@@ -25,7 +25,6 @@
         background: #f1f1f1;
     }
     .list-option{
-     
         width: 1000px;
         background: #f1f1f1;
         float: right;
@@ -51,20 +50,22 @@
  
    //这是列表页的渲染
 .list-DataSeries{
-  
-    width: 1000px;
+
+     float: right;
+     width: 1000px;
  .DataSeries{
-     @include tangxinghe();
+     @include tangxinghe(row,wrap,flex-start);
+  
  } 
     overflow: hidden;
         li{  
             text-align: center;
-            margin: 0 auto;
+            margin-left: 10px;
             margin-top: 14px;
             $box-sizing:border-box;
             background: white;
             width: 240px;
-            @include tangxinghe(flex,column,wrap,space-around);
+            @include tangxinghe(column,wrap,space-around);
             @include w-h(240px,360px);
         &:hover{
                box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
@@ -92,14 +93,15 @@
               color:  #666;
            }
          .jiage{
-              @include tangxinghe();
+             @include tangxinghe();
               @include width-height-line-height(190px,22px,22px);
+
              h3{
                         color: red;
                         float: left;
+
                     }
-                    h6{
-                       //  float: right;
+            h6{
                        color: #999999;
                     }
 

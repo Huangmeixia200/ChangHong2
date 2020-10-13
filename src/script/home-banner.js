@@ -1,28 +1,28 @@
 define([], function() {
     return {
-       // 这里是结构里图片的渲染
-       render:!function(){
-         const banner =$('.banner-images');
-         $.ajax({
-             url:'http://192.168.11.77/myself/ChangHong/php/home-banner.php',
-             dataType:'json'
-         }).done(function(data){
-             console.log(data);
-             let strhtml='';
-             $.each(data,function(index,value){
-                 strhtml+=`
-                 <li>
-                 <img src="${value.url}" alt="" class="banner-${value.sid} lazy">
-                 </li>
-                 `;
-             })
-             banner.html(strhtml);
-             $("img.lazy").lazyload({
-                effect: "fadeIn" //图片显示方式
-              });
-           })
+       // 这里是结构里图片的渲染  广告图不需要渲染 一般都是拿的链接
+    //    render:!function(){
+    //      const banner =$('.banner-images');
+    //      $.ajax({
+    //          url:'http://192.168.11.77/myself/ChangHong/php/home-banner.php',
+    //          dataType:'json'
+    //      }).done(function(data){
+    //          console.log(data);
+    //          let strhtml='';
+    //          $.each(data,function(index,value){
+    //              strhtml+=`
+    //              <li>
+    //              <img src="${value.url}" alt="" class="banner-${value.sid} lazy">
+    //              </li>
+    //              `;
+    //          })
+    //          banner.html(strhtml);
+    //          $("img.lazy").lazyload({
+    //             effect: "fadeIn" //图片显示方式
+    //           });
+    //        })
           
-       }(),
+    //    }(),
         // 这里是轮播图的渲染
         banner:!function(){
             class Banner{
@@ -69,6 +69,3 @@ define([], function() {
     
 });
 
-<p>${value.title}</p>
-<span>${value.detal}</span>
-<h4>￥${value.price}</h4>

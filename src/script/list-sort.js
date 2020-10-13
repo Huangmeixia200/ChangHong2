@@ -1,4 +1,4 @@
-define(['jq_paginationjs'], function() {
+define([], function() {
     return{
         render: ! function() {
         //前端传递对应的页面给后端，后端根据页面返回对应的数据。
@@ -11,27 +11,30 @@ define(['jq_paginationjs'], function() {
         //冒泡排序，比较相邻的两个数字。
         let prev = null; //前一个商品价格
         let next = null; //后一个商品价格
+
         //1.渲染列表页的数据-默认渲染第一页
         const list = $('.DataSeries');
         $.ajax({
             url: 'http://192.168.11.77/myself/ChangHong/php/listdata.php',
             dataType: 'json'
         }).done(function(data) {
-              let  str ='';
+              let  str1 ='';
             $.each(data, function(index, value) {
-               str += 
+               str1 += 
                          `
-                   <li class="list-${value.sid}">
-                         <img class="lazy" data-original="${value.url}" >
-                         <i>${value.title}</i>
-                         <b>${value.title2}</b>
-                         <div class="jiage"> <h3> ￥${value.price}</h3> <h6>0人评价</h6> </div>
-                         <div class="gwc"><span class="iconfont"> &#xf0179;</span> 加入购物车 </div>
+                   <li>
+                      <a href="detail.html?sid=${value.sid}" target="_blank">
+                          <img class="lazy" data-original="${value.url}" >
+                          <i>${value.title}</i>
+                          <b>${value.title2}</b>
+                          <div class="jiage"> <h3 class="price">￥${value.price}</h3> <h6>0人评价</h6> </div>
+                          <div class="gwc"><span class="iconfont"> &#xf0179;</span> 加入购物车 </div>
+                      </a>
                    </li>
                         `;
             });
         
-            list.html(str);
+            list.html(str1);
             $('img.lazy').lazyload({
                 effect:"fadeIn"
             })
@@ -67,13 +70,15 @@ define(['jq_paginationjs'], function() {
                     let str = '';
                     $.each(data, function(index, value) {
                         str += `
-                        <li class="list-${value.sid}">
-                            <img class="lazy" data-original="${value.url}" >
-                            <i>${value.title}</i>
-                            <b>${value.title2}</b>
-                            <div class="jiage"> <h3> ￥${value.price}</h3> <h6>0人评价</h6> </div>
-                            <div class="gwc"><span class="iconfont"> &#xf0179;</span> 加入购物车 </div>
-                       </li>
+                         <li>
+                             <a href="detail.html?sid=${value.sid}" target="_blank">
+                               <img class="lazy" data-original="${value.url}" >
+                               <i>${value.title}</i>
+                               <b>${value.title2}</b>
+                               <div class="jiage"> <h3 class="price">￥${value.price}</h3> <h6>0人评价</h6> </div>
+                               <div class="gwc"><span class="iconfont"> &#xf0179;</span> 加入购物车 </div>
+                             </a>
+                        </li>
                         `;
                     });
                    list.html(str);
@@ -93,8 +98,58 @@ define(['jq_paginationjs'], function() {
             }
     
         });
-    }()
-    }
+        
+    //3.排序，排序前的数组都已经具有li元素
+    // 默认
+    $('button').eq(0).on('click', function() {
+        $.each(array_default, function(index, value) {
+            list.append(value);
+        });
+        return;
+    });
+    //升序
+    $('button').eq(1).on('click', function() {
+        for (let i = 0; i < array.length - 1; i++) {
+            for (let j = 0; j < array.length - i - 1; j++) {
+                prev = parseFloat(array[j].find('.price').html().substring(1)); //取上个价格
+                next = parseFloat(array[j + 1].find('.price').html().substring(1)); //下一个的价格
+                //通过价格的判断，改变的是数组li的位置。
+                // console.log(prev,next);
+                if (prev > next) {
+                    let temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+      list.empty(); //清空原来的列表
+        $.each(array, function(index, value) {
+            list.append(value);
+
+        });
+    });
+     //降序
    
-    
+     $('button').eq(2).on('click', function() {
+        for (let i = 0; i < array.length - 1; i++) {
+            for (let j = 0; j < array.length - i - 1; j++) {
+                prev = parseFloat(array[j].find('.price').html().substring(1)); //取上个价格
+                next = parseFloat(array[j + 1].find('.price').html().substring(1)); //下一个的价格
+                //通过价格的判断，改变的是数组li的位置。
+                // console.log(prev,next);
+                if (prev < next) {
+                    let temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+      list.empty(); //清空原来的列表
+        $.each(array, function(index, value) {
+            list.append(value);
+
+        });
+    });
+    }()
+ }
 });
