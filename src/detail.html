@@ -426,7 +426,7 @@
              <div class="pic">
                   <div id="spic">  <!-- 小放 -->
                      <img src="" alt="" id="smallpic">  <!-- 小图 -->
-                     <div id="sf">我是小放</div>  <!-- 小放 -->
+                     <div id="sf"></div>  <!-- 小放 -->
                  </div>
                  <div id="bf"> 
                      <img src="" alt="" id="bpic">
@@ -434,35 +434,37 @@
              </div>
 
               <div id="ulist">    <!-- 这里是放大镜下面的轮播详情图片 -->
-                  <a href="javascript:;" id="left">&lt;</a>  <!-- 左按钮 -->
+                  <a href="javascript:;" id="btn-left">&lt;</a>  <!-- 左按钮 -->
                   <div id="list">
                       <ul>
                              <!-- 这里是放放大镜下面的的图片 -->
                       </ul>
                   </div>
-                  <a href="javascript:;" id="right">&gt;</a>  <!-- 右按钮 -->
+                  <a href="javascript:;" id="btn-right">&gt;</a>  <!-- 右按钮 -->
               </div>
         
              
        
-              <div id="goodsinfo-word"> <!-- 这个是放购物车右侧的文字详情 -->
-                  <div class="p-name"> <!-- 这个是放每个链接标题的地方 -->
-                      <a class="loadtitle" href="##">每个链接标题的地方</a>
-                  </div>
-                  <div class="p-price"> <!-- 这个是放每个链接价格的地方 -->
-                      <strong>
+              <ul id="goodsinfo-word"> <!-- 这个是放购物车右侧的文字详情 -->
+                  <li class="p-name"> <!-- 这个是放每个链接标题的地方 -->
+                      <a class="loadtitle" href="##" ></a>
+                      <a class="loadtitle2" href="##"> </a>
+                  </li>
+                  <li class="p-price" > <!-- 这个是放每个链接价格的地方 -->
+                      <strong >
                           <em>￥</em>
-                          <i class="loadpcp">具体价格</i><!-- 这个是放每个链接 具体 价格的地方 -->
+                          <i class="loadpcp"></i><!-- 这个是放每个链接 具体 价格的地方 -->
                       </strong>
-                  </div>
-                  <div class="p-btn"> <!-- 这里是添加入购物车的地方 -->
-                      <input type="text" id="count" value="1" /><!-- 这个input框是放购物车个数的地方 -->
-                      <a href="javascript:;">加入购物车</a> <!-- 这个是加入购物车按钮 -->
-                  </div>
-                  <p> 
-                      <a href="cart.html">进入购物车</a>
-                  </p>
-              </div>  
+                  </li>
+                  <li class="p-btn"> <!-- 这里是添加入购物车的地方 -->
+                      <a href="javascript:;" class="add">+</a> <!-- 这个是加入购物车按钮 -->
+                      <input type="text" id="count" value="1" class="input" /><!-- 这个input框是放购物车个数的地方 -->
+                      <a href="javascript:;" class="del">-</a> <!-- 这个是加入购物车按钮 -->
+                  </li>
+                  <li class="addcart"> 
+                      <a href="cart.html">加入购物车</a>
+                  </li>
+              </ul>  
         </div>
     </div>
 
