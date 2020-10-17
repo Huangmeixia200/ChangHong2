@@ -1,0 +1,56 @@
+@import "iconfont";
+@import "public";
+@import "toolbar-nav";
+@import "home-footer";
+/* 这里是第二部分导航 */
+.hd-Second-wrap {
+    i{
+        line-height: 60px;
+        color: #999999;
+        margin-right:  30px;
+        font-size: 20px;
+    }
+    span{
+        line-height: 81px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+}
+.registry{
+    @include w-h(450px,120px);
+    @include warp-center();
+    @include tangxinghe(row,wrap,center);
+    margin-top: 30px;
+    form{
+      p{
+        text-indent: 30px;
+        font-size: 14px;
+        margin-top: 30px;
+        @include width-height-line-height(380px 40px 40px);
+      }
+      .ser{
+         position: relative;
+         em{
+             
+             @include position(right,absolute,0px,55px);
+             color: #999999;
+         }
+      }
+
+      input{
+        @include width-height-line-height(338px,40px,40px);
+        font-size: 13px;
+        text-indent: 10px;
+        margin-left: 20px;
+        color: #999999;
+      }
+      .submit{
+        @include w-h(320px,44px);
+        color: white;
+        background: red;
+      }
+
+
+    }
+}

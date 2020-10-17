@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <meta name="renderer"
+        content="webkit" />
+    <meta name="renderer"
+        content="
+        65Q3T，4K，人工智能，参数，价格，图片" />
+    <title>用户注册</title>
+    <link rel="stylesheet" href="css/registry.css">
+    <script src="script/require.js" defer async="true" data-main="script/home-main.js"></script>
+</head>
+<body>
+    <!-- 导航第二部分 -->
+    <div class="hd-Second">
+        <div class="hd-Second-wrap">
+            <h1><a href="index1.html"><img src="../src/images/h1.png" alt=""></a></h1>
+            <i>|</i>
+            <span>注册</span>
+        </div>
+    </div> 
+     <!-- 这里是登陆部分 -->
+    <div class="registry">
+        <form action="http://10.31.163.209/myself/ChangHong/php/registry.php" method="POST" id="registry">
+            <P>用户姓名<input type="text" name="username" class="username" placeholder="请输入用户名"><span class="tips1"></span></P>
+            <P>电子邮箱<input type="email" name="email" class="email" placeholder="请输入电子邮箱"><span class="tips2"></span></P>
+            <P class="ser">用户密码<input type="text" name="password" class="password" placeholder="请输入密码"><span class="tips3"></span>
+               <em>长度在8-16之间，必须包含数字和字母</em>
+            </P>
+            
+            <P>确认密码<input type="text" name="username" class="username" placeholder="请确认密码"><span class="tips4"></span></P>
+            <p><input type="submit" name="submit" class="submit" value="提交注册"></p>
+        </form>
+    </div>
+</body>
+</html>

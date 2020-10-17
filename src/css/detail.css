@@ -1,4 +1,49 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'iconfont';
+  src: url("../iconfont/iconfont.eot");
+  src: url("../iconfont/iconfont.eot?#iefix") format("embedded-opentype"), url("../iconfont/iconfont.woff2") format("woff2"), url("../iconfont/iconfont.woff") format("woff"), url("../iconfont/iconfont.ttf") format("truetype"), url("../iconfont/iconfont.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuchekong:before {
+  content: "\f0179";
+}
+
+.icon-ren:before {
+  content: "\e619";
+}
+
+.icon-bangzhugouwu:before {
+  content: "\e64c";
+}
+
+.icon-mes:before {
+  content: "\e626";
+}
+
+.icon-fapiao:before {
+  content: "\e683";
+}
+
+.icon-diqiu:before {
+  content: "\e864";
+}
+
+.icon-tubiaozhizuomoban:before {
+  content: "\e618";
+}
+
+.icon-tianqiyunduo:before {
+  content: "\e628";
+}
+
 .box_left {
   background-image: url("img/banner_left.jpg");
 }
@@ -603,8 +648,8 @@ body, html {
 
 #ulist {
   display: flex;
-  flex-direction: flex;
-  flex-wrap: row;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
   width: 510px;
   height: 106px;
@@ -620,18 +665,27 @@ body, html {
   line-height: 106px;
 }
 
-#list ul {
-  width: 470px;
+#list {
+  width: 510px;
   height: 108px;
+  border: 1px solid red;
+  position: relative;
   overflow: hidden;
+}
+
+#list ul {
+  border: 1px solid;
+  position: absolute;
+  height: 100px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 #list ul img {
-  width: 106px;
+  width: 108px;
   height: 108px;
+  margin: 5px;
 }
 
 #goodsinfo-word {

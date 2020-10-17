@@ -33,8 +33,8 @@
     }
 }
  //边框圆角
-@mixin radius {
-    border-radius: 10px;
+@mixin radius ($radius:10px){
+    border-radius:$radius;
 }
  //文本溢出隐藏
 @mixin ellipsis() {

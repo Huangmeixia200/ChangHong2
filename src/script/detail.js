@@ -13,7 +13,7 @@ define([], function() {
             }
             //将sid的数据传给后端
             $.ajax({
-                url: 'http://192.168.11.77/myself/ChangHong/php/getsid.php',
+                url: 'http://10.31.163.209/myself/ChangHong/php/getsid.php/myself/ChangHong/php/getsid.php',
                 data: {
                     sid: sid
                 },
@@ -43,7 +43,6 @@ define([], function() {
              var right = $('#btn-right'); //右箭头
              var list = $('#list'); //小图列表 
             //$spic 小图  bpic 大图  
-            
         //小放/大放=小图/大图
         sf.width(spic.width() * bf.width() /bpic.width());
         sf.height(spic.height() * bf.height() /bpic.height());
@@ -75,54 +74,49 @@ define([], function() {
                     left: -leftvalue * bili,
                     top: -topvalue * bili
                 });
-    
             });
         }, function() {
             sf.css('visibility', 'hidden');
             bf.css('visibility', 'hidden');
         });
-
         //小图切换
         $('#list ul').on('click', 'li', function() {
-            //$(this):当前操作的li
            var imgurl = $(this).find('img').attr('src');
                 smallpic.attr('src', imgurl);
                 bpic.attr('src', imgurl);
         });
        //左右箭头事件
-       var num = 5; //列表显示的图片个数
-         right.on('click', function() {
+      var num = 4; //列表显示的图片个数
+           right.on('click', function() {
+               console.log(2);
            var lists = $('#list ul li');
            if (lists.size() > num) { //限制点击的条件
-               num++;
+               console.log(num);
+               console.log(-(num - 4) * lists.eq(0).outerWidth(true));
+               num++; 
                left.css('color: #d1d1d1;');
-            //    if (lists.size() == num) {
-            //        right.css('color: #d1d1d1; font-size: 30px;  @include width-height-line-height(20px,106px,106px);');
-            //    }
-               $('#list ul').animate({
-                   left: -($num - 5) * lists.eq(0).outerWidth(true)
+               if (lists.size() == num) {
+                   right.css('color: #d1d1d1; font-size: 30px;  @include width-height-line-height(20px,106px,106px);');
+               }
+         $('#list ul').animate({
+                   left: -(num - 4) * lists.eq(0).outerWidth(true)
                });
            }
        });
-   
-   
        left.on('click', function() {
-           let lists = $('#list ul li');
-           if (num > 5) { //限制点击的条件
+           console.log(1);
+           var lists = $('#list ul li');
+           console.log(lists);
+           if (num > 4) { //限制点击的条件
                num--;
-               right;
-            //    if (num <= 5) {
-            //        left.css('color: #d1d1d1; font-size: 30px;  @include width-height-line-height(20px,106px,106px);');
-            //    }
-               $('#list ul').animate({
-                   left: -(num - 5) * lists.eq(0).outerWidth(true)
-               });
-           }
-       });
-
-
-
-
+               if (num <= 4) {
+                   left.css('color: #d1d1d1; font-size: 30px;  @include width-height-line-height(20px,106px,106px);');
+               }
+        $('#list ul').animate({
+                   left: -(num - 4) * lists.eq(0).outerWidth(true)
+                });
+              }
+           });
         }()
      }
  });

@@ -1,0 +1,229 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'iconfont';
+  src: url("../iconfont/iconfont.eot");
+  src: url("../iconfont/iconfont.eot?#iefix") format("embedded-opentype"), url("../iconfont/iconfont.woff2") format("woff2"), url("../iconfont/iconfont.woff") format("woff"), url("../iconfont/iconfont.ttf") format("truetype"), url("../iconfont/iconfont.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuchekong:before {
+  content: "\f0179";
+}
+
+.icon-ren:before {
+  content: "\e619";
+}
+
+.icon-bangzhugouwu:before {
+  content: "\e64c";
+}
+
+.icon-mes:before {
+  content: "\e626";
+}
+
+.icon-fapiao:before {
+  content: "\e683";
+}
+
+.icon-diqiu:before {
+  content: "\e864";
+}
+
+.icon-tubiaozhizuomoban:before {
+  content: "\e618";
+}
+
+.icon-tianqiyunduo:before {
+  content: "\e628";
+}
+
+.box_left {
+  background-image: url("img/banner_left.jpg");
+}
+
+.box_middle {
+  background-image: url("img/banner_middle.jpg");
+}
+
+.box_right {
+  background-image: url("img/banner_right.jpg");
+}
+
+ul, ol, dl {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, select, option, textarea {
+  outline: none;
+  border: 0;
+}
+
+em, strong, i, u, b, strong {
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+html,
+body,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+a,
+textarea,
+select,
+div,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Microsoft YaHei", "微软雅黑", "Arial", sans-serif;
+  background: #f9f9f9;
+}
+
+body, html {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top {
+  margin-bottom: 30px;
+  line-height: 81px;
+  background: white;
+  width: 100%;
+  height: 81px;
+}
+.top img {
+  width: 145px;
+  height: 52px;
+  vertical-align: middle;
+  float: left;
+  margin: 15px 0 0 30px;
+}
+.top p {
+  width: 200px;
+  height: 81px;
+  font-size: 18px;
+  float: left;
+  vertical-align: middle;
+}
+.top span {
+  float: left;
+  margin: 0 10px;
+  color: #999999;
+  margin-right: 30px;
+}
+
+.login {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1226px;
+  margin: 0 auto;
+  height: 500px;
+}
+.login .con {
+  width: 520px;
+  height: 450px;
+  background: white;
+}
+.login .con-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.login .con-top div {
+  font-size: 20px;
+  width: 260px;
+  height: 60px;
+  line-height: 60px;
+}
+.login .con-mid {
+  margin: 0 auto;
+}
+.login .con-mid p {
+  margin: 0 auto;
+  width: 380px;
+  height: 40px;
+  position: relative;
+  border: 1px solid #999999;
+  margin-top: 30px;
+}
+.login .con-mid p i {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 30px;
+  color: #999999;
+}
+.login .con-mid p input {
+  width: 338px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 42px;
+  top: 0px;
+  font-size: 16px;
+  text-indent: 10px;
+}
+.login .con-mid p .btn {
+  width: 380px;
+  height: 40px;
+  margin-left: -42px;
+  background: #1c95f3;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.login .con-btm {
+  width: 380px;
+  height: 20px;
+  line-height: 20px;
+  color: #1c95f3;
+  text-align: right;
+  margin: 0 auto;
+  font-size: 12px;
+}
+.login .con-btm a {
+  color: #1c95f3;
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,89 @@
+@import "iconfont";
+@import "public";
+.top{
+    margin-bottom: 30px;
+    line-height: 81px;
+    background: white;
+    @include w-h(100%,81px);
+    img{
+        @include w-h(145px,52px);
+        vertical-align: middle;
+        float: left;
+        margin: 15px 0 0 30px;
+    
+    }
+    p{
+        @include w-h(200px,81px);
+        font-size: 18px;
+        float: left;
+        vertical-align: middle;
+    }
+    span{
+        float: left;
+        margin: 0 10px;
+        color: #999999; 
+        margin-right: 30px;
+
+    }
+}
+
+
+.login{ 
+    text-align: center;
+    @include tangxinghe(row,wrap,center);
+    @include warp-center();
+    height: 500px;
+    .con{
+        @include w-h(520px,450px);
+        background: white;
+    }
+    .con-top{
+    @include tangxinghe(row,wrap,flex-start);
+      div{
+          font-size: 20px;
+          @include width-height-line-height(260px,60px,60px);
+      }
+    }
+    .con-mid{
+        margin:  0 auto;
+        p{  margin:0 auto;
+            @include w-h(380px,40px);
+            position: relative;
+            border: 1px solid #999999;
+            margin-top: 30px;
+            i{
+                @include position(left,absolute,0px,0px);
+                @include width-height-line-height(42px,42px,42px);
+                font-size: 30px;
+                color: #999999;
+            }
+            input{
+                @include width-height-line-height(338px,40px,40px);
+                @include position(left,absolute,42px,0px);
+                font-size: 16px;
+                text-indent: 10px;
+           
+            }
+          .btn{
+              @include w-h(380px,40px);
+              margin-left: -42px;
+              background:#1c95f3;
+              color: white;
+              font-size: 18px;
+              cursor: pointer;
+              @include radius(5px);
+          }
+        }
+    }
+    .con-btm{
+        @include width-height-line-height(380px,20px,20px);
+        color:#1c95f3;
+        text-align: right;
+        margin: 0 auto;
+        font-size:12px;
+        a{
+           color:#1c95f3;
+        }
+    }
+
+}

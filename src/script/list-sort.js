@@ -15,7 +15,7 @@ define([], function() {
         //1.渲染列表页的数据-默认渲染第一页
         const list = $('.DataSeries');
         $.ajax({
-            url: 'http://192.168.11.77/myself/ChangHong/php/listdata.php',
+            url: 'http://10.31.163.209/myself/ChangHong/php/listdata.php',
             dataType: 'json'
         }).done(function(data) {
               let  str1 ='';
@@ -61,7 +61,7 @@ define([], function() {
             callback: function(api) {
                 console.log(api.getCurrent()); //获取当前的点击的页码。
                 $.ajax({
-                    url: 'http://192.168.11.77/myself/ChangHong/php/listdata.php',
+                    url: 'http://10.31.163.209/myself/ChangHong/php/listdata.php',
                     data: {
                         page: api.getCurrent() //传输数据
                     },
@@ -72,7 +72,7 @@ define([], function() {
                         str += `
                          <li>
                              <a href="detail.html?sid=${value.sid}" target="_blank">
-                               <img class="lazy" data-original="${value.url}" >
+                               <img class="lazy" data-original="${value.url}">
                                <i>${value.title}</i>
                                <b>${value.title2}</b>
                                <div class="jiage"> <h3 class="price">￥${value.price}</h3> <h6>0人评价</h6> </div>
@@ -147,8 +147,8 @@ define([], function() {
       list.empty(); //清空原来的列表
         $.each(array, function(index, value) {
             list.append(value);
-
         });
+        
     });
     }()
  }
